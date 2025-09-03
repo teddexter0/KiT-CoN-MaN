@@ -6,21 +6,21 @@
     <tr>
       <td align="center">
         <img src="/assets/screenshots/screenshot%20(1).jpeg" width="300px" alt="Main Interface" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>🏆 Main Interface</b>
+        <br><b>🔢 Statistical Insight</b>
       </td>
       <td align="center">
         <img src="/assets/screenshots/screenshot%20(2).jpeg" width="300px" alt="Tactical Analysis" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>⚽ Tactical Analysis</b>
+        <br><b>➕ Add New Contact</b>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="/assets/screenshots/screenshot%20(3).jpeg" width="300px" alt="Custom Tactics Editor" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>🎯 Custom Tactics Editor</b>
+        <br><b>🏠 Home Screen</b>
       </td>
       <td align="center">
         <img src="/assets/screenshots/screenshot%20(4).jpeg" width="300px" alt="Mobile Experience" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>📱 Mobile Responsive</b>
+        <br><b>⚡ Dummy example</b>
       </td>
     </tr>
   </table>

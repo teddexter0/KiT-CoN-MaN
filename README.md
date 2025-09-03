@@ -28,12 +28,13 @@ Different interaction types (messages, calls, hangouts) affect the next reminder
 - Progress tracking for relationship strength
 - Export your data anytime
 
+## License
+
+This is a proprietary software. See the [LICENSE](LICENSE) file for details.
+# KiT-CoN-MaN
+
 ## Getting Started
 
 ```bash
 npm install
 npm start
-## License
-
-This is a proprietary software. See the [LICENSE](LICENSE) file for details.
-# KiT-CoN-MaN

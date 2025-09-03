@@ -1,6 +1,30 @@
 # KiT-Con-Man (Keeping-in-Touch-Contact-Manager)
 
-A relationship management app for people who struggle to keep in touch with friends and family. Uses spaced repetition to remind you when to reach out, without being overwhelming.
+## 🎬 Screenshots  
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="/assets/screenshots/screenshot%20(1).jpeg" width="300px" alt="Main Interface" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>🏆 Main Interface</b>
+      </td>
+      <td align="center">
+        <img src="/assets/screenshots/screenshot%20(2).jpeg" width="300px" alt="Tactical Analysis" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>⚽ Tactical Analysis</b>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="/assets/screenshots/screenshot%20(3).jpeg" width="300px" alt="Custom Tactics Editor" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>🎯 Custom Tactics Editor</b>
+      </td>
+      <td align="center">
+        <img src="/assets/screenshots/screenshot%20(4).jpeg" width="300px" alt="Mobile Experience" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>📱 Mobile Responsive</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## The Problem
 

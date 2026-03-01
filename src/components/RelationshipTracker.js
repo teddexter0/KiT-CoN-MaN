@@ -147,34 +147,35 @@ const RelationshipTracker = () => {
   const workloadAnalysis = calculateDailyWorkload(contacts);
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-gray-50 min-h-screen">
-      <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-        <div className="flex justify-between items-center mb-6">
+    <div className="max-w-6xl mx-auto p-4 md:p-6 bg-gray-50 min-h-screen">
+      <div className="bg-white rounded-lg shadow-sm p-4 md:p-6 mb-6">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">KiT-Con-Man</h1>
-            <p className="text-gray-600 mt-2">Keep in Touch Contact Manager - Relationship Fitness Tracker</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">KiT-Con-Man</h1>
+            <p className="text-gray-600 mt-1 text-sm md:text-base hidden sm:block">Keep in Touch Contact Manager</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <button
               onClick={() => setShowAnalysis(!showAnalysis)}
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 text-white px-3 py-2 rounded-lg flex items-center gap-2 hover:bg-purple-700 transition-colors text-sm"
             >
-              <BarChart3 size={20} />
-              Analysis
+              <BarChart3 size={18} />
+              <span className="hidden sm:inline">Analysis</span>
             </button>
             <button
               onClick={exportContacts}
-              className="bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-green-700 transition-colors"
+              className="bg-green-600 text-white px-3 py-2 rounded-lg flex items-center gap-2 hover:bg-green-700 transition-colors text-sm"
             >
-              <Download size={20} />
-              Export
+              <Download size={18} />
+              <span className="hidden sm:inline">Export</span>
             </button>
             <button
               onClick={() => setShowAddForm(true)}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-3 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors text-sm"
             >
-              <Plus size={20} />
-              Add Contact
+              <Plus size={18} />
+              <span className="hidden sm:inline">Add Contact</span>
+              <span className="sm:hidden">Add</span>
             </button>
           </div>
         </div>

@@ -50,7 +50,7 @@ const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) =>
 
   return (
     <div className={`p-4 rounded-lg border ${isDue ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`}>
-      <div className="flex items-start justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
             <h3 className="font-medium text-gray-900">{contact.name}</h3>
@@ -124,7 +124,7 @@ const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) =>
           )}
         </div>
         
-        <div className="flex flex-col gap-2 ml-4">
+        <div className="flex flex-row flex-wrap sm:flex-col gap-1 sm:gap-2 sm:ml-2">
           {Object.entries(interactionTypes).map(([method, config]) => {
             const Icon = config.icon;
             const isRecommended = method === suggestedMethod;
@@ -133,7 +133,7 @@ const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) =>
                 key={method}
                 onClick={() => onContact(contact.id, method)}
                 className={`p-2 rounded-lg transition-colors flex items-center gap-1 text-xs ${
-                  isRecommended 
+                  isRecommended
                     ? `bg-${config.color}-200 text-${config.color}-800 border-2 border-${config.color}-400 font-semibold`
                     : `bg-${config.color}-100 text-${config.color}-700 hover:bg-${config.color}-200`
                 }`}

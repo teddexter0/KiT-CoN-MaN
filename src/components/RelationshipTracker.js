@@ -9,7 +9,10 @@ const RelationshipTracker = () => {
   const [contacts, setContacts] = useState([]);
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingContact, setEditingContact] = useState(null);
-  const [dailyLimit, setDailyLimit] = useState(2);
+  const [dailyLimit, setDailyLimit] = useState(() => {
+    const saved = localStorage.getItem('kitConManDailyLimit');
+    return saved ? Number(saved) : 2;
+  });
   const [showAnalysis, setShowAnalysis] = useState(false);
 
   useEffect(() => {
@@ -70,6 +73,8 @@ const RelationshipTracker = () => {
     const interactionWeights = {
       'message': 0.5,
       'call': 1,
+      'watch': 1.5,
+      'game': 1.5,
       'meetup': 2,
       'trip': 3
     };
@@ -258,7 +263,11 @@ const RelationshipTracker = () => {
               <label className="text-sm text-yellow-700">Contacts per day:</label>
               <select
                 value={dailyLimit}
-                onChange={(e) => setDailyLimit(Number(e.target.value))}
+                onChange={(e) => {
+                  const val = Number(e.target.value);
+                  setDailyLimit(val);
+                  localStorage.setItem('kitConManDailyLimit', val);
+                }}
                 className="px-3 py-1 border border-yellow-300 rounded text-yellow-800 bg-white"
               >
                 <option value={1}>1 (Deep focus)</option>

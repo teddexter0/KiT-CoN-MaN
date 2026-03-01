@@ -1,64 +1,35 @@
-# KiT-Con-Man (Keeping-in-Touch-Contact-Manager)
+# KiT-CoN-MaN
 
-## 🎬 Screenshots  
+KiT-CoN-MaN is a preliminary idea on a discreet first social media app. Maybe you're ADHD (or just scatterbrained) or you just binge and play games and forget other things in life beyond screens. So this helps keep in touch with people you know. Ideally more offline, but as a subtle online non-broadcast nudge. Yeah...
+
 <div align="center">
   <table>
     <tr>
       <td align="center">
         <img src="/assets/screenshots/screenshot%20(1).jpeg" width="300px" alt="Main Interface" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>🔢 Statistical Insight</b>
+        <br><b>Statistical Insight</b>
       </td>
       <td align="center">
-        <img src="/assets/screenshots/screenshot%20(2).jpeg" width="300px" alt="Tactical Analysis" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>➕ Add New Contact</b>
+        <img src="/assets/screenshots/screenshot%20(2).jpeg" width="300px" alt="Add Contact" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>Add New Contact</b>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="/assets/screenshots/screenshot%20(3).jpeg" width="300px" alt="Custom Tactics Editor" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>🏠 Home Screen</b>
+        <img src="/assets/screenshots/screenshot%20(3).jpeg" width="300px" alt="Home Screen" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>Home Screen</b>
       </td>
       <td align="center">
-        <img src="/assets/screenshots/screenshot%20(4).jpeg" width="300px" alt="Mobile Experience" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
-        <br><b>⚡ Dummy example</b>
+        <img src="/assets/screenshots/screenshot%20(4).jpeg" width="300px" alt="Example" style="border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <br><b>Example</b>
       </td>
     </tr>
   </table>
 </div>
-
-## The Problem
-
-You have people you genuinely care about but haven't talked to in months or years. You think "I should text them" but then overthink it: *Is it weird after so long? What do I even say? When should I follow up?*
-
-## The Solution
-
-KiT-Con-Man uses the same science behind language learning apps - spaced repetition - to maintain relationships. It suggests the optimal timing for reaching out, starting gentle and building toward meaningful reconnections.
-
-## How It Works
-
-**Phase 1: Breaking the Ice** (Days 1-14)
-- Initial message → Follow-up → Deeper conversation
-
-**Phase 2: Building Connection** (Days 21-90)
-- Coffee meetup → Planned activity → Regular maintenance
-
-Different interaction types (messages, calls, hangouts) affect the next reminder timing. Deeper connections naturally space out longer while lighter touches keep relationships warm.
-
-## Key Features
-
-- Smart timing reminders based on relationship stage
-- Daily limits to prevent overwhelming yourself
-- Conversation starter suggestions
-- Progress tracking for relationship strength
-- Export your data anytime
-
-## License
-
-This is a proprietary software. See the [LICENSE](LICENSE) file for details.
-# KiT-CoN-MaN
 
 ## Getting Started
 
 ```bash
 npm install
 npm start
+```

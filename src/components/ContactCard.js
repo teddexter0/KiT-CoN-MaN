@@ -1,12 +1,14 @@
 import React from 'react';
-import { MessageCircle, Phone, Coffee, Plane, Edit, Trash2, Star, Lightbulb } from 'lucide-react';
+import { MessageCircle, Phone, Coffee, Plane, Tv, Gamepad2, Edit, Trash2, Star, Lightbulb, AlertTriangle } from 'lucide-react';
 import { formatDate, getDaysUntil, getRelationshipStrength, getConversationSuggestion } from '../utils/dateUtils';
 
 const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) => {
   const interactionTypes = {
     'message': { label: 'Message', weight: 0.5, icon: MessageCircle, color: 'green' },
     'call': { label: 'Call', weight: 1, icon: Phone, color: 'blue' },
-    'meetup': { label: 'Coffee', weight: 2, icon: Coffee, color: 'purple' },
+    'watch': { label: 'Watch', weight: 1.5, icon: Tv, color: 'indigo' },
+    'game': { label: 'Game', weight: 1.5, icon: Gamepad2, color: 'pink' },
+    'meetup': { label: 'Meetup', weight: 2, icon: Coffee, color: 'purple' },
     'trip': { label: 'Adventure', weight: 3, icon: Plane, color: 'orange' }
   };
 
@@ -52,6 +54,12 @@ const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) =>
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
             <h3 className="font-medium text-gray-900">{contact.name}</h3>
+            {contact.handleWithCare && (
+              <span className="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-800 flex items-center gap-1">
+                <AlertTriangle size={10} />
+                handle with care
+              </span>
+            )}
             <span className={`px-2 py-1 text-xs rounded-full ${
               contact.contactType === 'estranged' 
                 ? 'bg-orange-100 text-orange-800' 
@@ -98,9 +106,13 @@ const ContactCard = ({ contact, onContact, onEdit, onDelete, isDue = false }) =>
           {contact.notes && (
             <p className="text-sm text-gray-500 mt-2">📝 {contact.notes}</p>
           )}
-          
+
           {contact.pastConnection && (
             <p className="text-sm text-blue-600 mt-1">🎯 {contact.pastConnection}</p>
+          )}
+
+          {contact.activityIdeas && (
+            <p className="text-sm text-emerald-700 mt-1">🎮 {contact.activityIdeas}</p>
           )}
 
           {contact.interactions && contact.interactions.length > 0 && (

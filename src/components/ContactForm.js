@@ -7,7 +7,9 @@ const ContactForm = ({ contact, onSave, onCancel, isEditing = false }) => {
     lastContact: '',
     notes: '',
     location: '',
-    pastConnection: ''
+    pastConnection: '',
+    activityIdeas: '',
+    handleWithCare: false
   });
 
   useEffect(() => {
@@ -20,7 +22,9 @@ const ContactForm = ({ contact, onSave, onCancel, isEditing = false }) => {
         lastContact: new Date().toISOString().split('T')[0],
         notes: '',
         location: '',
-        pastConnection: ''
+        pastConnection: '',
+        activityIdeas: '',
+        handleWithCare: false
       });
     }
   }, [contact, isEditing]);
@@ -32,9 +36,10 @@ const ContactForm = ({ contact, onSave, onCancel, isEditing = false }) => {
   };
 
   const handleChange = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: value
     });
   };
 
@@ -131,7 +136,35 @@ const ContactForm = ({ contact, onSave, onCancel, isEditing = false }) => {
             rows="3"
           />
         </div>
-        
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Activity ideas
+          </label>
+          <input
+            type="text"
+            name="activityIdeas"
+            value={formData.activityIdeas}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="e.g. 'FIFA, that new film, book club chat...'"
+          />
+        </div>
+
+        <div className="flex items-center gap-3">
+          <input
+            type="checkbox"
+            name="handleWithCare"
+            id="handleWithCare"
+            checked={formData.handleWithCare}
+            onChange={handleChange}
+            className="w-4 h-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+          />
+          <label htmlFor="handleWithCare" className="text-sm font-medium text-gray-700">
+            Handle with care <span className="font-normal text-gray-500">(complicated history or sensitive dynamic)</span>
+          </label>
+        </div>
+
         <div className="flex gap-3">
           <button
             type="submit"

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Mobile-first responsive background */
 body {
   background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #e17055 100%);

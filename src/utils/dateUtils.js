@@ -69,7 +69,6 @@ export const getConversationSuggestion = (repCount, contactName, pastConnection)
 
 // Calculate realistic daily workload
 export const calculateDailyWorkload = (contacts) => {
-  const today = new Date();
   const estrangedContacts = contacts.filter(c => c.contactType === 'estranged');
   
   // Intervals: [1, 7, 14, 21, 30, 45, 60, 90] = 268 days total
